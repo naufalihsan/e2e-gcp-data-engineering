@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: order_model
+    description: "Order model"
+    columns:
+      - name: order_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: order_item_model
+    description: "Order item model"
+    columns:
+      - name: order_item_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: order_detail_model
+    description: "Denormalize order and order item model"
